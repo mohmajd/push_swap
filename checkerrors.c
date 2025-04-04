@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:24:30 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/19 00:01:00 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 09:56:59 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ t_stacks	**ft_check(char **av, size_t *size)
 	{
 		buffer = ft_split(av[i], ' ');
 		if (!buffer)
-			return (ft_freestructe(arr, total), NULL);
+			return (gc_free(arr), NULL);
 		if (!ft_checkerrors(buffer, size, arr))
-			return (ft_freestructe(arr, total), NULL);
+			return (gc_free(arr), NULL);
 		i++;
 	}
 	return (arr);

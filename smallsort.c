@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:29:59 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/18 23:51:42 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 09:58:41 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,11 @@ static void	push_smalltob(t_stacks **arr_a, t_stacks **arr_b,
 		rra(arr_a, *size_a);
 	pb(arr_a, arr_b, size_a, size_b);
 }
-#include <stdio.h>
+
 void	ft_sortfive(t_stacks **arr, t_stacks **arr_b,
 			size_t *size_a, size_t *size_b)
 {
 	push_smalltob(arr, arr_b, size_a, size_b);
 	ft_sortfour(arr, arr_b, size_a, size_b);
 	pa(arr, arr_b, size_a, size_b);
-//	printf("add_a = %p\nadd_b = %p", arr[0], arr_b[0]);
 }
