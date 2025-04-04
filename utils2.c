@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:30:10 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/18 23:51:27 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 16:03:16 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,20 +84,16 @@ int	ft_getmax(t_stacks **arr, size_t size_a)
 	}
 	return (max);
 }
-#include "stdio.h"
 
-void	ft_freestructe(t_stacks **arr, size_t total)
+void	ft_free(t_stacks **arr, size_t total)
 {
 	size_t	i;
 
 	i = 0;
-	//printf("add = %p\n", arr);
 	while (i < total)
 	{
-		//printf("add[%lu] = %p\n", i, arr[i]);
 		free(arr[i]);
 		i++;
 	}
 	free(arr);
-	//printf("-----------------------------------\n\n");
 }

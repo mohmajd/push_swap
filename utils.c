@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:03:48 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/19 00:01:22 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 15:55:31 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	ft_freebuffer(char **buffer)
 		return ;
 	while (buffer && buffer[i])
 	{
-		gc_free(buffer[i]);
+		free(buffer[i]);
 		i++;
 	}
-	gc_free (buffer);
+	free (buffer);
 }
 
 int	ft_isdegit(char *buffer)

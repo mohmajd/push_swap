@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 18:26:34 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/18 23:59:28 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 15:51:22 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*ft_allocatstring(char *str, int c)
 
 	i = ft_len(str, c);
 	j = 0;
-	buffer = gc_malloc(sizeof(char) * (i + 1));
+	buffer = malloc(sizeof(char) * (i + 1));
 	if (!buffer)
 		return (NULL);
 	while (j < i)
@@ -79,7 +79,7 @@ char	**ft_split(char *str, int c)
 	size = ft_countwords(str, c);
 	if (!str || size == 0)
 		return (NULL);
-	buffer = gc_malloc(sizeof(char *) * (size + 1));
+	buffer = malloc(sizeof(char *) * (size + 1));
 	if (buffer == NULL)
 		return (NULL);
 	i = -1;

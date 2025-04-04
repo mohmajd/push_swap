@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:31:51 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/19 00:03:19 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 15:56:11 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ int	ft_getminpos(t_stacks **arr, size_t size)
 	return (pos);
 }
 
-#include <stdio.h>
 void	ft_checksize(t_stacks **arr_a, t_stacks **arr_b,
 			size_t *size_a, size_t *size_b)
 {

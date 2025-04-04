@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:24:30 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/04/04 09:56:59 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 15:53:56 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,20 @@ t_stacks	**ft_alloc(size_t total)
 	size_t		i;
 
 	i = 0;
-	arr = gc_malloc (sizeof(t_stacks *) * total);
+	arr = malloc (sizeof(t_stacks *) * total);
+	if (!arr)
+		return (NULL);
 	while (i < total)
 	{
-		arr[i] = gc_malloc (sizeof(t_stacks));
+		arr[i] = malloc (sizeof(t_stacks));
 		if (!arr[i])
-			return (gc_free_all(), NULL);
+		{
+			while (--i > 0)
+				free(arr[i]);
+			return (NULL);
+		}
 		i++;
 	}
-	if (!arr)
-		return (gc_free_all(), NULL);
 	return (arr);
 }
 
@@ -72,9 +76,9 @@ t_stacks	**ft_check(char **av, size_t *size)
 	{
 		buffer = ft_split(av[i], ' ');
 		if (!buffer)
-			return (gc_free(arr), NULL);
+			return (ft_free(arr, total), NULL);
 		if (!ft_checkerrors(buffer, size, arr))
-			return (gc_free(arr), NULL);
+			return (ft_free(arr, total), NULL);
 		i++;
 	}
 	return (arr);

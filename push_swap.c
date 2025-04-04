@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 13:31:13 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/04/04 09:23:55 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 16:15:49 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,9 @@ void	push_all_to_b(t_stacks **arr_a, t_stacks **arr_b,
 			i++;
 		}
 		else if (arr_a[0]->index <= (i + x))
-		{
-			
-			pb(arr_a, arr_b, size_a, size_b);		
-			rb(arr_b, *size_b);
+		{	
+			pb(arr_a, arr_b, size_a, size_b);
+			rb(arr_b, *size_b); 
 			i++;
 		}
 		else

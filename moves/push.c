@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 22:57:24 by mohmajdo          #+#    #+#             */
-/*   Updated: 2025/03/19 01:32:00 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2025/04/04 16:03:31 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	pb(t_stacks **arr_a, t_stacks **arr_b, size_t *size_a, size_t *size_b)
 	if (*size_a == 0)
 		return ;
 	i = *size_b;
-	
 	while (i > 0)
 	{
 		*arr_b[i] = *arr_b[i - 1];
